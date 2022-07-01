@@ -27,7 +27,7 @@ class GenericCz(BaseCommitizen):
         # functional changes
         Kind("add", "added something new"),
         Kind("remove", "took away something old"),
-        Kind("change", "not new, not old, just different"),
+        Kind("update", "not new, not old, just different"),
         Kind("fix", "oopsy"),
 
         # refactoring
