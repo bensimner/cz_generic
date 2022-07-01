@@ -3,6 +3,8 @@ from commitizen.defaults import Questions
 
 from textwrap import dedent
 
+VERSION = "2022.07.b1"
+
 class Kind:
     def __init__(self, name, doc):
         self.name = name
