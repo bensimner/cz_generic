@@ -61,7 +61,7 @@ class GenericCz(BaseCommitizen):
 
     def schema_pattern(self) -> str:
         BODY_PATTERN = r"(\s.*)"
-        PATTERN_PARTS = [r"(\(\S+\))?", "(" + "|".join(kind.name for kind in self.KINDS) + ")", ":", BODY_PATTERN]
+        PATTERN_PARTS = [r"(\(\S+\)\s)?", "(" + "|".join(kind.name for kind in self.KINDS) + ")", ":", BODY_PATTERN]
         PATTERN = "".join(PATTERN_PARTS)
         return PATTERN
 
