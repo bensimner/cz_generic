@@ -12,4 +12,4 @@ repos:
     rev: v2.27.1
     hooks:
     -   id: commitizen
-        additional_dependencies: [git+https://github.com/bensimner/cz_generic.git]
+        additional_dependencies: [git+https://github.com/bensimner/cz_generic.git@v2022.07b1]
