@@ -9,7 +9,7 @@ repos:
     -   id: mixed-line-ending
         args: ['--fix=lf']
 -   repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.27.1
+    rev: v2.29.2
     hooks:
     -   id: commitizen
         additional_dependencies: [git+https://github.com/bensimner/cz_generic.git@v2022.07b1]
