@@ -3,7 +3,7 @@ from commitizen.defaults import Questions
 
 from textwrap import dedent
 
-VERSION = "2022.07.b1"
+VERSION = "2022.07.b2"
 
 class Kind:
     def __init__(self, name, doc):
@@ -18,7 +18,7 @@ class GenericCz(BaseCommitizen):
     """
 
     SCHEMA = dedent("""\
-        ["(" <what> ")"] <kind> ":" <subject>
+        ("(" <what> ")")? <kind> ":"? <subject>
 
         <body>
 
@@ -63,7 +63,7 @@ class GenericCz(BaseCommitizen):
 
     def schema_pattern(self) -> str:
         BODY_PATTERN = r"(\s.*)"
-        PATTERN_PARTS = [r"(\(\S+\)\s)?", "(" + "|".join(kind.name for kind in self.KINDS) + ")", ":", BODY_PATTERN]
+        PATTERN_PARTS = [r"(\(\S+\)\s)?", "(" + "|".join(kind.name for kind in self.KINDS) + ")", ":?", BODY_PATTERN]
         PATTERN = "".join(PATTERN_PARTS)
         return PATTERN
 
